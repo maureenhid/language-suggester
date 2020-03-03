@@ -6,22 +6,20 @@ $(document).ready(function() {
     var animal = $("input:radio[name=animal]:checked").val();
     var task = $("input:radio[name=task]:checked").val();
     var pastime = $("input:radio[name=pastime]:checked").val();
-
-
+    var result;
 
     if (environment === 'a' && food === 'a' && animal === 'a' || animal === 'a' && task === 'a' && pastime === 'a' || food === 'a' && task === 'a' && pastime === 'a') {
-      $(".person1").text(person1Input);
-      $("#python").show();
+      result = "#python";
     } else if (environment === 'b' && food === 'b' && animal === 'b' || animal === 'b' && task === 'b' && pastime === 'b'|| food === 'b' && task === 'b' && pastime === 'b') {
-      $(".person1").text(person1Input);
-      $("#ruby").show();
+      result = "#ruby";
     } else if (environment === 'c' && food === 'c' && animal === 'c' || animal === 'c' && task === 'c' && pastime === 'c'|| food === 'c' && task === 'c' && pastime === 'c') {
-      $(".person1").text(person1Input);
-      $("#javascript").show();
+      result = "#javascript";
     } else if (environment === 'd' && food === 'd' && animal === 'd' || animal === 'd' && task === 'd' && pastime === 'd'|| food === 'd' && task === 'd' && pastime === 'd') {
-      $(".person1").text(person1Input);
-      $("#sql").show();
+      result = "#sql";
     }
+
+    $(".person1").text(person1Input);
+    $(result).toggle();
 
     event.preventDefault();
   });  

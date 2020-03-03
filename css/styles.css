@@ -1,15 +1,28 @@
 #python {
   display: none;
+  color: white;
 }
 
 #ruby {
   display: none;
+  color: white;
 }
 
 #javascript {
   display: none;
+  color: white;
 }
 
 #sql {
   display: none;
+  color: white;
+}
+
+body {
+  background-color: black;
+  color: limegreen;
+}
+
+.container {
+  padding-bottom: 25px;
 }
